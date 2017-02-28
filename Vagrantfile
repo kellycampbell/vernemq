@@ -44,16 +44,16 @@ fi
     make rel
 SCRIPT
 
-$vernemq_release = '0.15.3'
+$vernemq_release = '0.15.4kc2'
 $erlang_release = '18.3'
 
 $configs = {
-    :jessie => {:sys => :apt, :img => 'debian/jessie64'},
-    :wheezy => {:sys => :apt, :img => 'debian/wheezy64'},
-    :trusty => {:sys => :apt, :img => 'ubuntu/trusty64', :primary => true},
-    :precise => {:sys => :apt, :img => 'ubuntu/precise64'},
-    :centos7 => {:sys => :yum, :img => 'puppetlabs/centos-7.0-64-nocm'},
-    :xenial => {:sys => :apt, :img => 'ubuntu/xenial64'},
+    :jessie => {:sys => :apt, :img => 'debian/jessie64',  :primary => true},
+    # :wheezy => {:sys => :apt, :img => 'debian/wheezy64'},
+    # :trusty => {:sys => :apt, :img => 'ubuntu/trusty64', :primary => true},
+    # :precise => {:sys => :apt, :img => 'ubuntu/precise64'},
+    # :centos7 => {:sys => :yum, :img => 'puppetlabs/centos-7.0-64-nocm'},
+    # :xenial => {:sys => :apt, :img => 'ubuntu/xenial64'},
 }
 
 Vagrant.configure(2) do |config|

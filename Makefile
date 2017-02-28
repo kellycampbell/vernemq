@@ -231,7 +231,7 @@ pkgclean: ballclean
 PKG_VERSION = $(shell echo $(PKG_ID) | sed -e 's/^$(REPO)-//')
 
 package: distdir/$(PKG_ID).tar.gz
-	ln -s distdir package
+	ln -sf distdir package
 	$(MAKE) -C package -f $(PKG_ID)/_build/default/lib/node_package/Makefile DEPS_DIR=_build/default/lib
 
 .PHONY: package
